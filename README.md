@@ -64,3 +64,10 @@ $ ./gradlew asciidoc
 
 Once generation happens the following HTML will contain the documentation:
 `build/docs/asciidoc/index.html`
+
+The docs are copied to `docs` folder which is used by Git pages:
+https://gyruck.github.io/adverity-test/
+
+## CI
+Currently, Git Actions is used for building and testing the project:
+https://github.com/gyruck/adverity-test/actions
