@@ -8,6 +8,12 @@ The following has been used to accomplish the task:
 * Docker, Kubernetes
 
 ## Running the application
+
+In order to load the database, first you have to call the following:
+```shell
+$ curl 'http://localhost:8080/database/load-from-s3' -i -X GET
+```
+
 ### Spring boot
 The simplest way of running the application is using the gradle wrapper and embedded webserver:
 ```shell
