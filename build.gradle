@@ -72,9 +72,15 @@ test {
 	useJUnitPlatform()
 }
 
+task publishAsciidoc(type: Copy) {
+	from 'build/docs/asciidoc'
+	into 'docs'
+}
+
 asciidoctor {
 	configurations 'asciidoctorExtensions'
 	dependsOn test
+	finalizedBy publishAsciidoc
 	attributes 'snippets': snippetsDir
 	inputs.dir snippetsDir
 	sources {
