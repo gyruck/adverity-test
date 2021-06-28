@@ -1,0 +1,79 @@
+= API refernce
+Gyorgy Ruck;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+Documenting the available API endpoints of Adverity home work API.
+
+== CSV
+Basic API to load database from S3:
+
+include::{snippets}/csv/curl-request.adoc[]
+
+Request
+
+include::{snippets}/csv/http-request.adoc[]
+
+Response
+
+include::{snippets}/csv/http-response.adoc[]
+
+== Site Analytics API
+=== find
+This call is a generic call for filtering and finding tracking records.
+
+Curl:
+include::{snippets}/sa-find/curl-request.adoc[]
+
+Request:
+include::{snippets}/sa-find/http-request.adoc[]
+
+Request parameters:
+include::{snippets}/sa-find/request-parameters.adoc[]
+
+Response fields:
+include::{snippets}/sa-find/response-fields.adoc[]
+
+Example response:
+include::{snippets}/sa-find/response-body.adoc[]
+
+=== /datasource/{datasource}
+Endpoint for grouping analytics records based on datasource.
+In case datasource is not specified then no filtering will be applied to it,
+however regular filters are still taking effect.
+
+Curl:
+include::{snippets}/sa-datasource/curl-request.adoc[]
+
+Request:
+include::{snippets}/sa-datasource/http-request.adoc[]
+
+Request parameters:
+include::{snippets}/sa-datasource/request-parameters.adoc[]
+
+Response fields:
+include::{snippets}/sa-datasource/response-fields.adoc[]
+
+Example response:
+include::{snippets}/sa-datasource/response-body.adoc[]
+
+=== /datasource/{datasource}/campaign/{campaign}
+Endpoint for grouping analytics records based on datasource and campaign.
+In case campaign is not specified then no filtering will be applied to it,
+however regular filters are still taking effect.
+
+Curl:
+include::{snippets}/sa-campaign/curl-request.adoc[]
+
+Request:
+include::{snippets}/sa-campaign/http-request.adoc[]
+
+Request parameters:
+include::{snippets}/sa-campaign/request-parameters.adoc[]
+
+Response fields:
+include::{snippets}/sa-campaign/response-fields.adoc[]
+
+Example response:
+include::{snippets}/sa-campaign/response-body.adoc[]
